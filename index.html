@@ -131,7 +131,7 @@
     }
 
     function dir(){
-      console.dir(document.body);
+      console.dir(document.head);
     }
 
     function dirxml(){
@@ -180,7 +180,13 @@
     }
 
     function globalError(){
-      
+
+    }
+
+    try{
+      noneExistentFunction();
+    }catch(err){
+      console.log(err);
     }
 
   </script>
