@@ -120,13 +120,67 @@
     }
 
     function assert(){
-      const count = console.count();
+      startTimer();
       const reason = "log count is less than 10";
-      console.assert(count < 10, {count, reason});
+      endTimer();
+      console.assert( 9< 10, {reason});
     }
 
     function clear(){
       console.clear();
+    }
+
+    function dir(){
+      console.dir(document.body);
+    }
+
+    function dirxml(){
+      console.dirxml(document);
+    }
+
+    function groupStart(){
+      const label = "groupName";
+      console.group(label);
+    }
+
+    function groupEnd(){
+      const label = "groupName";
+      console.groupEnd(label);
+
+    }
+
+    function table(){
+      console.table([
+        {
+          first: 'Kyle',
+          last: 'Zhong',
+        },
+        {
+          first: 'Professor',
+          last: 'Powell',
+          grade: "A+"
+        },
+        {
+          first: 'John',
+          last: 'Smith',
+        }
+      ]);
+    }
+
+    function startTimer(){
+      console.time();
+    }
+
+    function endTimer(){
+      console.timeEnd();
+    }
+
+    function trace(){
+      console.trace();
+    }
+
+    function globalError(){
+      
     }
 
   </script>
