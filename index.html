@@ -75,7 +75,7 @@
       <button onClick ="warn()">Console Warn</button>
       <button onClick ="assert()">Console Assert</button>
       <button onClick ="clear()">Console Clear</button>
-      <button onClick ="dir()">Console Dir</button>
+      <button onClick ="DIR()">Console Dir</button>
       <button onClick ="dirxml()">Console dirxml</button>
       <button onClick ="groupStart()">Console Group Start</button>
       <button onClick ="groupEnd()">Console Group End</button>
@@ -105,6 +105,14 @@
 
     function log(){
       console.log('We are logging are now');
+
+      try{
+      noneExistentFunction();
+      }catch(err){
+        console.log(err);
+      }finally{
+        console.log("we are here finally...");
+      }
     }
 
     function error(){
@@ -130,7 +138,7 @@
       console.clear();
     }
 
-    function dir(){
+    function DIR(){
       // console.dir(document.head);
       console.log("We're in dir");
     }
@@ -184,13 +192,9 @@
 
     }
 
-    try{
-      noneExistentFunction();
-    }catch(err){
-      console.log(err);
-    }finally{
-      console.log("we are here finally...");
-    }
+
+
+
 
   </script>
 </body>
