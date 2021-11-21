@@ -107,9 +107,9 @@
       console.log('We are logging are now');
 
       try{
-      noneExistentFunction();
+        noneExistentFunction();
       }catch(err){
-        console.log(err);
+        console.log("we have caught an error: ", err);
       }finally{
         console.log("we are here finally...");
       }
@@ -139,8 +139,8 @@
     }
 
     function DIR(){
-      // console.dir(document.head);
-      console.log("We're in dir");
+      console.dir(document.head);
+      // console.log("We're in dir");
     }
 
     function dirxml(){
