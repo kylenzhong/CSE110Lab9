@@ -70,20 +70,20 @@
 
     <section id="error-btns">
       <button onClick ="log()">Console Log</button>
-      <button>Console Error</button>
-      <button>Console Count</button>
-      <button>Console Warn</button>
-      <button>Console Assert</button>
-      <button>Console Clear</button>
-      <button>Console Dir</button>
-      <button>Console dirxml</button>
-      <button>Console Group Start</button>
-      <button>Console Group End</button>
-      <button>Console Table</button>
-      <button>Start Timer</button>
-      <button>End Timer</button>
-      <button>Console Trace</button>
-      <button>Trigger a Global Error</button>
+      <button onClick ="error()">Console Error</button>
+      <button onClick ="count()">Console Count</button>
+      <button onClick ="warn()">Console Warn</button>
+      <button onClick ="assert()">Console Assert</button>
+      <button onClick ="clear()">Console Clear</button>
+      <button onClick ="dir()">Console Dir</button>
+      <button onClick ="dirxml()">Console dirxml</button>
+      <button onClick ="groupStart()">Console Group Start</button>
+      <button onClick ="groupEnd()">Console Group End</button>
+      <button onClick ="table()">Console Table</button>
+      <button onClick ="startTimer()">Start Timer</button>
+      <button onClick ="endTimer()">End Timer</button>
+      <button onClick ="trace()">Console Trace</button>
+      <button onClick ="globalError()">Trigger a Global Error</button>
     </section>
   </main>
 
@@ -105,6 +105,28 @@
 
     function log(){
       console.log('We are logging are now');
+    }
+
+    function error(){
+      console.error("I am afraid we have hit an error");
+    }
+
+    function count(){
+      console.count();
+    }
+
+    function warn(){
+      console.warn('I am just giving you a warning for now');
+    }
+
+    function assert(){
+      const count = console.count();
+      const reason = "log count is less than 10";
+      console.assert(count < 10, {count, reason});
+    }
+
+    function clear(){
+      console.clear();
     }
 
   </script>
