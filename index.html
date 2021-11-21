@@ -74,7 +74,7 @@
       <button onClick ="count()">Console Count</button>
       <button onClick ="warn()">Console Warn</button>
       <button onClick ="assert()">Console Assert</button>
-      <button onClick ="clear()">Console Clear</button>
+      <button onClick ="CLEAR()">Console Clear</button>
       <button onClick ="DIR()">Console Dir</button>
       <button onClick ="dirxml()">Console dirxml</button>
       <button onClick ="groupStart()">Console Group Start</button>
@@ -87,7 +87,13 @@
     </section>
   </main>
 
-  <script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js">
+
+    window.TrackJS && TrackJS.install({ 
+        token: "17238141aca246ce9a335a23e10836fe"
+      });
+
+
     let form = document.querySelector('form');
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -137,7 +143,7 @@
       console.assert( 9< 10, {reason});
     }
 
-    function clear(){
+    function CLEAR(){
       console.clear();
     }
 
