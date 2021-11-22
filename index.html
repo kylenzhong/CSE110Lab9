@@ -123,7 +123,7 @@
 
     function error(){
       console.error("I am afraid we have hit an error");
-      throw new error("I am throwing an error");
+      
     }
 
     function count(){
@@ -196,10 +196,15 @@
     }
 
     function globalError(){
+      
+      if(!startTimer()){
+        throw new error("I am throwing an error");
+      }
+      
       window.onerror = function(message, url, line, col, error) {
         alert(`${message}\n At ${line}:${col} of ${url}`);
      }
-     TrackJS.track('Testing TrackJS!');
+     TrackJS.track('We are playing the messages in TrackJS!');
     }
 
 
